@@ -4,7 +4,7 @@
   auto_https off
 }
 
-{$PORT:3000} {
+:{$PORT:3000} {
   root * dist
   encode gzip
   try_files {path} /index.html
