@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.log
+*.tsbuildinfo
+.DS_Store
+
+# Local content reference
+Copy.txt
+
+# Original working assets; optimized copies used by the site are in public/
+/*.jpeg
+/*.png
