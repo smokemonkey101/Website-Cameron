@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client'
 import {Menu, X, Heart, Users, Phone, MapPin, ChevronRight, ShieldCheck, Activity, Eye, CheckCircle, Landmark, TrendingUp, ClipboardCheck} from 'lucide-react'
 import './styles.css'
 import './expanded.css'
+import './layout-fixes.css'
 
 type Lang='en'|'es'
 type Page='home'|'meet'|'priorities'|'donate'

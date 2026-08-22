@@ -1,0 +1,38 @@
+/* Keep gallery images inside their desktop grid row instead of overflowing into the next story section. */
+.photoStrip {
+  height: 330px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.photoStrip img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 330px;
+  min-height: 0;
+  object-fit: cover;
+}
+
+.story {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+
+@media (max-width: 850px) {
+  .photoStrip {
+    height: auto;
+    overflow: visible;
+  }
+
+  .photoStrip img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 520px) {
+  .photoStrip img {
+    height: 200px;
+  }
+}
