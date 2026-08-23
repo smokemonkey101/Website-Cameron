@@ -1,4 +1,9 @@
 /* Keep gallery images inside their desktop grid row instead of overflowing into the next story section. */
+.hero {
+  background-image: url('/home-hero-no-mic.jpg');
+  background-position: right center;
+}
+
 .photoStrip {
   height: 330px;
   min-height: 0;
@@ -45,6 +50,40 @@
   object-fit: cover;
 }
 
+.faithFeature {
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) minmax(380px, 1.1fr);
+  max-width: 1250px;
+  margin: auto;
+  padding: 90px 6vw;
+  gap: 7vw;
+  align-items: start;
+}
+
+.faithCopy h2 {
+  color: var(--navy);
+  font-size: 48px;
+  text-transform: uppercase;
+  margin: 10px 0 22px;
+}
+
+.faithCopy p {
+  color: #526174;
+  font-size: 15px;
+}
+
+.faithExpanded {
+  display: none;
+}
+
+.faithExpanded.open {
+  display: block;
+}
+
+.faithToggle {
+  margin-top: 16px;
+}
+
 @media (max-width: 850px) {
   .photoStrip {
     height: auto;
@@ -62,6 +101,11 @@
   .storyCollage {
     grid-template-rows: repeat(2, 220px);
   }
+
+  .faithFeature {
+    grid-template-columns: 1fr;
+    padding: 70px 8vw;
+  }
 }
 
 @media (max-width: 520px) {
@@ -73,5 +117,9 @@
     grid-template-rows: repeat(2, 160px);
     gap: 6px;
     padding: 6px;
+  }
+
+  .faithCopy h2 {
+    font-size: 38px;
   }
 }
