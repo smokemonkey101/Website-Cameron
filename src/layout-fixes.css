@@ -16,9 +16,11 @@
 
 .heroContent > h1::before,
 .heroContent > h1::after {
-  content: '';
-  width: 24px;
-  border-top: 4px solid var(--red);
+  content: none;
+}
+
+.portrait .quote {
+  right: -25px;
 }
 
 .heroGovernance {
@@ -32,6 +34,113 @@
 
 .hero .secondary:hover {
   background: #0d3968;
+}
+
+.brand img {
+  width: 68px;
+  height: 68px;
+  margin-right: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.hero .actions > .primary,
+.hero .actions > .secondary {
+  min-width: 180px;
+  min-height: 50px;
+  padding: 13px 22px;
+  border-width: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bioButton {
+  margin-top: 18px;
+}
+
+.meetPageHero {
+  background-position: center 35%;
+  padding-bottom: 35px;
+}
+
+.results {
+  background: #fff;
+  color: var(--navy);
+}
+
+.results .resultGrid {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+}
+
+.results .resultGrid article {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: start;
+  gap: 22px;
+  background: var(--cream);
+  border: 0;
+  border-left: 5px solid var(--red);
+}
+
+.results .resultGrid article > svg {
+  width: 36px;
+  height: 36px;
+  margin-top: 4px;
+}
+
+.results .resultGrid h3 {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+.results .resultGrid p {
+  margin: 0 0 14px;
+  color: #526174;
+}
+
+.results .resultGrid p:last-child {
+  margin-bottom: 0;
+}
+
+.priorityGroup {
+  padding: 70px 0 25px;
+  background: var(--navy);
+}
+
+.priorityGroup .campaignQuote {
+  margin-top: 0;
+}
+
+.priorityGroup .priorityDetail,
+.priorityGroup .priorityDetail.p1 {
+  background: transparent;
+  color: #fff;
+}
+
+.priorityGroup .priorityHeading {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.priorityGroup .priorityHeading h2,
+.priorityGroup .priorityDetail > strong {
+  color: #fff;
+}
+
+.priorityGroup .priorityColumns article,
+.priorityGroup .p0 .priorityColumns article,
+.priorityGroup .p2 .priorityColumns article {
+  background: #fff;
+  border: 0;
 }
 
 .photoStrip {
@@ -102,19 +211,42 @@
   font-size: 15px;
 }
 
+.storyExpanded,
 .faithExpanded {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.55s ease, opacity 0.3s ease, margin-top 0.3s ease;
 }
 
+.storyExpanded.open,
 .faithExpanded.open {
-  display: block;
+  max-height: 7000px;
+  margin-top: 18px;
+  opacity: 1;
 }
 
+.storyToggle,
 .faithToggle {
   margin-top: 16px;
 }
 
+.storyToggle[aria-expanded='true'] svg,
+.faithToggle[aria-expanded='true'] svg {
+  transform: rotate(90deg);
+}
+
+.storyToggle svg,
+.faithToggle svg {
+  transition: transform 0.25s ease;
+}
+
 @media (max-width: 850px) {
+  .brand img {
+    width: 56px;
+    height: 56px;
+  }
+
   .heroContent > h1 {
     font-size: 25px;
   }
@@ -147,12 +279,6 @@
     gap: 7px;
     font-size: 22px;
     white-space: normal;
-  }
-
-  .heroContent > h1::before,
-  .heroContent > h1::after {
-    width: 14px;
-    flex: 0 0 14px;
   }
 
   .photoStrip img {
