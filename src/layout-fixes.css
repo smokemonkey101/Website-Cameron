@@ -20,6 +20,31 @@
   background: #fff;
 }
 
+.storyCollage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 270px);
+  gap: 10px;
+  min-width: 0;
+  padding: 10px;
+  background: var(--navy);
+  box-shadow: 24px 24px 0 var(--red);
+}
+
+.story.reverse .storyCollage {
+  order: 2;
+  box-shadow: -24px 24px 0 var(--red);
+}
+
+.storyCollage img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+}
+
 @media (max-width: 850px) {
   .photoStrip {
     height: auto;
@@ -29,10 +54,24 @@
   .photoStrip img {
     height: 280px;
   }
+
+  .story.reverse .storyCollage {
+    order: 0;
+  }
+
+  .storyCollage {
+    grid-template-rows: repeat(2, 220px);
+  }
 }
 
 @media (max-width: 520px) {
   .photoStrip img {
     height: 200px;
+  }
+
+  .storyCollage {
+    grid-template-rows: repeat(2, 160px);
+    gap: 6px;
+    padding: 6px;
   }
 }
