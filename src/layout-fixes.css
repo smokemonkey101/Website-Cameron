@@ -4,6 +4,36 @@
   background-position: right center;
 }
 
+.heroContent > h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 8px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.heroContent > h1::before,
+.heroContent > h1::after {
+  content: '';
+  width: 24px;
+  border-top: 4px solid var(--red);
+}
+
+.heroGovernance {
+  margin: 0 0 8px !important;
+}
+
+.hero .secondary {
+  border-color: #164b82;
+  background: #164b82;
+}
+
+.hero .secondary:hover {
+  background: #0d3968;
+}
+
 .photoStrip {
   height: 330px;
   min-height: 0;
@@ -85,6 +115,10 @@
 }
 
 @media (max-width: 850px) {
+  .heroContent > h1 {
+    font-size: 25px;
+  }
+
   .photoStrip {
     height: auto;
     overflow: visible;
@@ -109,6 +143,18 @@
 }
 
 @media (max-width: 520px) {
+  .heroContent > h1 {
+    gap: 7px;
+    font-size: 22px;
+    white-space: normal;
+  }
+
+  .heroContent > h1::before,
+  .heroContent > h1::after {
+    width: 14px;
+    flex: 0 0 14px;
+  }
+
   .photoStrip img {
     height: 200px;
   }
