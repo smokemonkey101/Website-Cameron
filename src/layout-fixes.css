@@ -48,6 +48,10 @@
   object-position: center;
 }
 
+.brand span {
+  margin-left: 10px;
+}
+
 .hero .actions > .primary,
 .hero .actions > .secondary {
   min-width: 180px;
@@ -116,6 +120,22 @@
   background: var(--navy);
 }
 
+.priorityPhotoStrip {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  height: 285px;
+  overflow: hidden;
+}
+
+.priorityPhotoStrip img {
+  display: block;
+  width: 100%;
+  height: 285px;
+  min-width: 0;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .priorityGroup .campaignQuote {
   margin-top: 0;
 }
@@ -165,6 +185,10 @@
   object-fit: cover;
 }
 
+.photoStrip img:last-child {
+  object-position: center top;
+}
+
 .story {
   position: relative;
   z-index: 1;
@@ -194,6 +218,11 @@
   height: 100%;
   min-height: 0;
   object-fit: cover;
+}
+
+.story.reverse .storyCollage img:first-child {
+  object-fit: contain;
+  background: #fff;
 }
 
 .faithFeature {
@@ -250,7 +279,7 @@
 
 @media (max-width: 850px) {
   .hero {
-    background-position: 45% center;
+    background-position: 35% center;
   }
 
   .heroContent > p,
@@ -263,6 +292,17 @@
     height: 56px;
   }
 
+  .brand span {
+    margin-left: 7px;
+    font-size: 16px;
+  }
+
+  .brand small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
   .heroContent > h1 {
     font-size: 25px;
   }
@@ -273,6 +313,15 @@
   }
 
   .photoStrip img {
+    height: 280px;
+  }
+
+  .priorityPhotoStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: auto;
+  }
+
+  .priorityPhotoStrip img {
     height: 280px;
   }
 
@@ -299,6 +348,10 @@
 
   .photoStrip img {
     height: 200px;
+  }
+
+  .priorityPhotoStrip img {
+    height: 210px;
   }
 
   .storyCollage {
