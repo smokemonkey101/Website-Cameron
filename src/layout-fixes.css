@@ -27,6 +27,10 @@
   margin: 0 0 8px !important;
 }
 
+.hero .heroPoints {
+  font-size: 16px;
+}
+
 .hero .secondary {
   border-color: #164b82;
   background: #164b82;
@@ -245,6 +249,15 @@
 }
 
 @media (max-width: 850px) {
+  .hero {
+    background-position: 55% center;
+  }
+
+  .heroContent > p,
+  .hero .heroPoints {
+    font-size: 14px;
+  }
+
   .brand img {
     width: 56px;
     height: 56px;
