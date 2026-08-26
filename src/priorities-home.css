@@ -45,6 +45,17 @@
   transition: none;
 }
 
+.priorities .cards .priorityCard > .icon {
+  flex: 0 0 68px;
+}
+
+.priorities .cards .priorityCard > h3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 30px;
+}
+
 .priorities .cards .priorityCard:hover {
   transform: none;
   box-shadow: none;
