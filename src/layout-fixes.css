@@ -78,6 +78,12 @@
   padding-bottom: 35px;
 }
 
+.heroContent > .heroBallot {
+  margin: 0 0 20px;
+  font-size: 42px;
+  letter-spacing: 1.5px;
+}
+
 .prioritiesPageHero {
   background-position: center 30%;
 }
@@ -86,12 +92,49 @@
   justify-content: flex-start;
 }
 
+.donatePage {
+  position: relative;
+  display: block;
+  min-height: calc(100vh - 92px);
+  padding: 58px 20px 90px;
+  background:
+    linear-gradient(rgba(3, 24, 56, .13), rgba(3, 24, 56, .13)),
+    url('/priority-strip-2.jpg') center top / cover fixed;
+}
+
+.donatePanel {
+  width: min(100%, 520px);
+  margin: 0 auto;
+  padding: 20px 28px 32px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 18px 55px rgba(3, 24, 56, .28);
+}
+
+.donatePanel > .donateCampaignLogo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 8px;
+  object-fit: contain;
+}
+
+.donateBack {
+  position: fixed;
+  z-index: 2;
+  top: 112px;
+  left: 24px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, .92);
+}
+
 .anedotFrame {
   display: block;
   width: 100%;
   height: 1450px;
   min-height: 1450px;
-  margin-top: 24px;
+  margin-top: 0;
   border: 0;
   background: #fff;
   overflow: hidden;
@@ -217,34 +260,12 @@
   min-width: 0;
   height: 330px;
   min-height: 0;
-  object-fit: contain;
-  object-position: center;
-  background: var(--navy);
+  object-fit: cover;
+  object-position: center top;
 }
 
 .photoStrip img:last-child {
-  object-position: center;
-}
-
-.donatePhotoGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: minmax(220px, 1fr);
-  gap: 4px;
-  min-height: 100vh;
-  overflow: hidden;
-  background: var(--navy);
-}
-
-.donatePhotoGrid img {
-  width: 100%;
-  height: 100%;
-  min-height: 220px;
-  object-fit: cover;
-}
-
-.donatePhotoGrid img:nth-child(3n) {
-  grid-column: 1 / -1;
+  object-position: center top;
 }
 
 .story {
@@ -262,6 +283,19 @@
   padding: 10px;
   background: var(--navy);
   box-shadow: 24px 24px 0 var(--red);
+}
+
+.storyCollage.singleCollage {
+  display: block;
+  padding: 10px;
+}
+
+.storyCollage.singleCollage img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
 }
 
 .story.reverse .storyCollage {
