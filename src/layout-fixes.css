@@ -370,6 +370,34 @@
 }
 
 @media (max-width: 850px) {
+  .donatePage {
+    min-height: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  .donatePage::before {
+    content: '';
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    background: url('/donation-background.jpeg') left top / cover no-repeat;
+  }
+
+  .donatePanel {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 28px 18px 40px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .donateBack {
+    top: 88px;
+    left: 14px;
+  }
+
   .hero {
     background-position: 35% center;
   }
