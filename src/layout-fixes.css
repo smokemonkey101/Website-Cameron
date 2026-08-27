@@ -385,10 +385,10 @@
   }
 
   .donatePanel {
-    width: 100%;
+    width: 90%;
     max-width: none;
-    margin: 0;
-    padding: 28px 18px 40px;
+    margin: 0 auto;
+    padding: 28px 0 40px;
     border-radius: 0;
     box-shadow: none;
   }
