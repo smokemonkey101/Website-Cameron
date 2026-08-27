@@ -37,16 +37,18 @@
   min-height: 380px;
   padding: 35px 24px 28px;
   border-bottom: 5px solid var(--red);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 68px 58px 1fr;
+  row-gap: 20px;
+  justify-items: center;
+  align-items: start;
   color: var(--navy);
   cursor: default;
   transition: none;
 }
 
 .priorities .cards .priorityCard > .icon {
-  flex: 0 0 68px;
+  align-self: start;
 }
 
 .priorities .cards .priorityCard > h3 {
@@ -55,6 +57,7 @@
   justify-content: center;
   height: 58px;
   min-height: 58px;
+  margin: 0;
 }
 
 .priorities .cards .priorityCard:hover {
@@ -65,12 +68,12 @@
 .priorities .priorityCard .icon {
   width: 68px;
   height: 68px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   background: var(--red);
 }
 
 .priorities .priorityCard h3 {
-  margin: 0 0 34px;
+  margin: 0;
   font-size: 29px;
 }
 
@@ -79,6 +82,7 @@
   grid-template-rows: 108px auto;
   width: 100%;
   margin-top: 0;
+  align-self: start;
 }
 
 .priorities .priorityCardCopy p {

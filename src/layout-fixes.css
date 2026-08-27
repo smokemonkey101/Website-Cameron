@@ -99,7 +99,7 @@
   padding: 58px 20px 90px;
   background:
     linear-gradient(rgba(3, 24, 56, .13), rgba(3, 24, 56, .13)),
-    url('/priority-strip-2.jpg') center top / cover fixed;
+    url('/priority-strip-2.jpg') 62% top / cover fixed;
 }
 
 .donatePanel {
