@@ -119,16 +119,6 @@
   object-fit: contain;
 }
 
-.donateBack {
-  position: fixed;
-  z-index: 2;
-  top: 112px;
-  left: 24px;
-  padding: 8px 12px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, .92);
-}
-
 .anedotFrame {
   display: block;
   width: 100%;
@@ -391,11 +381,6 @@
     padding: 28px 0 40px;
     border-radius: 0;
     box-shadow: none;
-  }
-
-  .donateBack {
-    top: 88px;
-    left: 14px;
   }
 
   .hero {
