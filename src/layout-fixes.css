@@ -1,7 +1,21 @@
 /* Keep gallery images inside their desktop grid row instead of overflowing into the next story section. */
 .hero {
   background-image: url('/home-hero-no-mic.jpg');
-  background-position: right center;
+  background-position: right top;
+}
+
+@media (min-width: 851px) {
+  nav {
+    gap: 20px;
+  }
+
+  nav > button:not(.donate) {
+    font-size: 15px;
+  }
+
+  nav .language {
+    font-size: 12px !important;
+  }
 }
 
 .heroContent > h1 {
@@ -84,6 +98,34 @@
   letter-spacing: 1.5px;
 }
 
+.heroContent > .heroBallot,
+.heroContent > .heroPrinciples {
+  font-size: 42px;
+  line-height: 1.03;
+}
+
+.heroContent > .heroBallot {
+  display: block;
+  white-space: normal;
+}
+
+.heroBallotPrimary,
+.heroBallotSecondary {
+  display: block;
+}
+
+.heroContent > .heroBallot .heroBallotPrimary {
+  font-size: 60px;
+}
+
+.heroContent > .heroBallot .heroBallotSecondary {
+  font-size: 42px;
+}
+
+.story#loss .storyImage {
+  background-position: center top;
+}
+
 .prioritiesPageHero {
   background-position: center 30%;
 }
@@ -99,7 +141,9 @@
   padding: 58px 20px 90px;
   background:
     linear-gradient(rgba(3, 24, 56, .13), rgba(3, 24, 56, .13)),
-    url('/donation-background.jpeg') left top / cover fixed;
+    url('/donation-background2.jpeg') center 92px / 100% auto no-repeat;
+  background-color: var(--cream);
+  background-attachment: fixed;
 }
 
 .donatePanel {
@@ -370,15 +414,16 @@
     content: '';
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 2;
-    background: url('/donation-background.jpeg') left top / cover no-repeat;
+    aspect-ratio: 3428 / 1597;
+    background: url('/donation-background2.jpeg') center / 100% 100% no-repeat;
+    background-attachment: scroll;
   }
 
   .donatePanel {
-    width: 94%;
+    width: 100%;
     max-width: none;
     margin: 0 auto;
-    padding: 28px 0 40px;
+    padding: 0 0 40px;
     border-radius: 0;
     box-shadow: none;
   }
@@ -389,7 +434,28 @@
   }
 
   .hero {
-    background-position: 35% center;
+    min-height: 0;
+    display: block;
+    padding: 0;
+    background: var(--navy);
+  }
+
+  .hero::before {
+    content: '';
+    display: block;
+    width: 100%;
+    aspect-ratio: 800 / 538;
+    background: url('/home-hero-no-mic.jpg') center / 100% 100% no-repeat;
+  }
+
+  .heroShade {
+    display: none;
+  }
+
+  .heroContent {
+    width: auto;
+    margin: 0;
+    padding: 22px 6vw 65px;
   }
 
   .heroContent > p,
@@ -414,6 +480,19 @@
   }
 
   .heroContent > h1 {
+    font-size: 25px;
+  }
+
+  .heroContent > .heroBallot,
+  .heroContent > .heroPrinciples {
+    font-size: 25px;
+  }
+
+  .heroContent > .heroBallot .heroBallotPrimary {
+    font-size: 42px;
+  }
+
+  .heroContent > .heroBallot .heroBallotSecondary {
     font-size: 25px;
   }
 
