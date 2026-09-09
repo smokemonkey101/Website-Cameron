@@ -553,3 +553,216 @@
     font-size: 38px;
   }
 }
+
+.futurePriorities {
+  padding: 28px 8vw 110px;
+  background: #f4f1eb;
+  color: var(--navy);
+}
+
+/* Keep the tighter spacing limited to the My Priorities page. */
+.prioritiesPage .results {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.prioritiesPage .results .resultGrid article {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.prioritiesPage .results .resultGrid h3 {
+  margin-bottom: 10px;
+}
+
+.prioritiesPage .priorityGroup {
+  padding-top: 35px;
+  padding-bottom: 13px;
+}
+
+.prioritiesPage .priorityGroup .priorityDetail,
+.prioritiesPage .priorityGroup .priorityDetail.p1 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.prioritiesPage .priorityGroup .priorityHeading {
+  margin-bottom: 8px;
+  gap: 2px;
+}
+
+.prioritiesPage .priorityGroup .priorityHeading > .icon {
+  margin: 0 auto;
+}
+
+.prioritiesPage .priorityGroup .priorityDetail > strong {
+  margin-top: 16px;
+}
+
+.prioritiesPage .priorityColumns {
+  gap: 15px;
+}
+
+.prioritiesPage .priorityColumns article {
+  padding: 18px;
+}
+
+.prioritiesPage .campaignQuote {
+  margin-bottom: 40px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
+.prioritiesPage .next {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.prioritiesPage .futurePriorities {
+  padding-top: 14px;
+  padding-bottom: 55px;
+}
+
+.prioritiesPage .futurePriority {
+  margin-bottom: 27px;
+  padding-top: 21px;
+  padding-bottom: 23px;
+}
+
+.prioritiesPage .futurePriority > h3 {
+  margin-bottom: 15px;
+}
+
+.prioritiesPage .futureMetrics {
+  margin-bottom: 18px;
+}
+
+.prioritiesPage .futureItems {
+  gap: 13px;
+}
+
+.futurePriority {
+  max-width: 1050px;
+  margin: 0 auto 54px;
+  padding: 42px 48px 46px;
+  background: #fff;
+  border-top: 6px solid var(--navy);
+  box-shadow: 0 8px 24px #0a21450d;
+}
+
+.futurePriority:nth-of-type(3) {
+  border-top-color: var(--red);
+}
+
+.futurePriority:last-child {
+  margin-bottom: 0;
+}
+
+.futurePriority > h3 {
+  margin: 0 0 30px;
+  font-size: 32px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.futurePriority > h3 span {
+  color: var(--red);
+}
+
+.futureMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 0 0 36px;
+  text-align: center;
+}
+
+.futureMetrics div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.futureMetrics strong {
+  font: 700 34px/1 'Barlow Condensed';
+}
+
+.futureMetrics span {
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.futureItems {
+  display: grid;
+  gap: 26px;
+}
+
+.futureItem {
+  padding-left: 25px;
+  border-left: 3px solid #d9dee5;
+}
+
+.futureItem h4 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.futureItem p {
+  margin: 0;
+  color: #526174;
+  font-size: 15px;
+}
+
+@media (max-width: 850px) {
+  .futurePriorities {
+    padding: 22px 6vw 80px;
+  }
+
+  .futurePriority {
+    padding: 32px 26px 36px;
+  }
+
+  .futurePriority > h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .futurePriority {
+    padding: 28px 20px 30px;
+  }
+
+  .futurePriority > h3 {
+    font-size: 25px;
+  }
+
+  .futureMetrics {
+    gap: 10px;
+  }
+
+  .futureMetrics strong {
+    font-size: 28px;
+  }
+
+  .futureMetrics span {
+    font-size: 9px;
+    letter-spacing: .5px;
+  }
+
+  .futureItem {
+    padding-left: 16px;
+  }
+
+  .futureItem h4 {
+    font-size: 17px;
+  }
+
+  .futureItem p {
+    font-size: 14px;
+  }
+}
+
